@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Lomoms | Main</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/common.css">
+</head>
+
+<body>
+  <div class="promo-ribbon is-moved-by-drawer">
+    <div class="top_header">
+      <div>
+        <img src="image/로맘스 로고 (텍스트).png">
+      </div>
+      <div class="top_center">
+        <a href=""><img src="image/페이스북.png"></a>
+        <a href=""><img src="image/인스타그램.png"></a>
+        <a href=""><img src="image/트위터.png"></a>
+        <a href=""><img src="image/유튜브.png"></a>
+      </div>
+      <div>
+        <a href="#">KR</a>
+      </div>
+    </div>
+  </div>
+  <div style="display:none">
+    <label></label>
+    <a></a>
+  </div>
+  <div id="NavDrawer" class="drawer drawer--left" style="display: none">
+    <!-- begin mobile-nav -->
+    <ul class="mobile-nav">
+      <li class="mobile-nav__item">
+        <a href="/pages/design" class="mobile-nav__link">BRAND</a>
+      </li>
+      <li class="mobile-nav__item" aria-haspopup="true">
+        <div class="mobile-nav__has-sublist">
+          <span class="mobile-nav__link">PRODUCTS</span>
+          <div class="mobile-nav__toggle">
+            <button type="button" class="icon-fallback-text mobile-nav__toggle-open">
+              <i class="fa fa-angle-down fa-lg" aria-hidden="true"></i>
+              <span class="fallback-text">See more</span>
+            </button>
+            <button type="button" class="icon-fallback-text mobile-nav__toggle-close">
+              <i class="fa fa-angle-up fa-lg" aria-hidden="true"></i>
+              <span class="fallback-text">"Close Cart"</span>
+            </button>
+          </div>
+        </div>
+        <ul class="mobile-nav__sublist">
+          <li class="mobile-nav__item  mobile-nav__item--active">
+            <a href="/" class="mobile-nav__link">Awair</a>
+          </li>
+          <li class="mobile-nav__item ">
+            <a href="/pages/awair-glow" class="mobile-nav__link">Glow</a>
+          </li>
+          <li class="mobile-nav__item ">
+            <a href="/pages/awair-baby" class="mobile-nav__link">Baby</a>
+          </li>
+          <li class="mobile-nav__item ">
+            <a href="/pages/awair-for-business" class="mobile-nav__link">Business</a>
+          </li>
+        </ul>
+      </li>
+      <li class="mobile-nav__item">
+        <a href="/pages/awair-plus" class="mobile-nav__link">COMMUNITY</a>
+      </li>
+      <li class="mobile-nav__item">
+        <a href="/pages/awair-for-business" class="mobile-nav__link">NEWSROOM</a>
+      </li>
+    </ul>
+    <!-- //mobile-nav -->
+  </div>
+  <div id="PageContainer">
+    <header class="site-header medium--hide small--hide">
+      <div class="wrapper">
+        <div class="grid--full">
+          <div class="grid__item large--one-quarter">
+            <div class="site-header__logo large--left" itemscope="" itemtype="http://schema.org/Organization">
+              <a href="/" itemprop="url" class="site-header__logo-link">
+                <img src="image/로맘스 로고 (original) (심볼).png">
+              </a>
+            </div>
+          </div>
+          <div class="grid__item large--one-half text-center">
+            <ul class="site-nav js" id="AccessibleNav">
+              <li>
+                <a href="/pages/design" class="site-nav__link">BRAND</a>
+              </li>
+              <li>
+                <span class="site-nav__link site-nav__link-products">PRODUCT</a>
+                </span>
+              </li>
+              <li>
+                <a href="/pages/awair-plus" class="site-nav__link">COMMUNITY</a>
+              </li>
+              <li>
+                <a href="/pages/awair-for-business" class="site-nav__link">NEWSROOM</a>
+              </li>
+            </ul>
+          </div>
+          <div class="grid__item large--one-quarter large--text-right medium-down--hide">
+            <div class="top-links">
+              <ul class="top-links--icon-links">
+                <li>
+                  <div class="buy-now">
+                    <a href="https://getawair.com/collections/all" class="addtocartbtn buybtn">
+                      Buy Now
+                    </a>
+                  </div>
+                </li>
+                <li>
+                  <a href="/cart" class="site-header__cart-toggle js-drawer-open-right" aria-controls="CartDrawer" aria-expanded="false">
+                    <i class="fa fa-shopping-cart fa-lg"></i>
+                    <span class="site-header__cart-indicator hide"></span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="products-nav" id="products-nav" style="top: 110px; display: none">
+      <div class="products-nav-container">
+        <a href="/" class="products-nav-item">
+          <img src="//cdn.shopify.com/s/files/1/1439/3986/t/6/assets/products-nav-awair.png?5423002369625910519" class="products-nav-item__image">
+          <span class="products-nav-item__name">Awair</span>
+        </a>
+        <a href="/pages/awair-glow" class="products-nav-item">
+          <img src="//cdn.shopify.com/s/files/1/1439/3986/t/6/assets/products-nav-glow.png?5423002369625910519" class="products-nav-item__image">
+          <span class="products-nav-item__name">Glow</span>
+        </a>
+        <a href="/pages/awair-baby" class="products-nav-item">
+          <img src="//cdn.shopify.com/s/files/1/1439/3986/t/6/assets/products-nav-baby.png?5423002369625910519" class="products-nav-item__image">
+          <span class="products-nav-item__name">Baby</span>
+        </a>
+        <a href="/pages/awair-for-business" class="products-nav-item">
+          <img src="//cdn.shopify.com/s/files/1/1439/3986/t/6/assets/products-nav-business.png?5423002369625910519" class="products-nav-item__image">
+          <span class="products-nav-item__name">Business</span>
+        </a>
+      </div>
+    </div>
+    <nav class="nav-bar mobile-nav-bar-wrapper large--hide medium-down--show" style="">
+      <div class="wrapper">
+        <div class="large--hide medium-down--show">
+          <div class="mobile-grid--table">
+            <div class="grid__item two-thirds">
+              <div class="site-nav--mobile">
+                <a href="/" itemprop="url" class="site-header__logo-link">
+                  <svg width="113" height="40" viewBox="0 0 113 40" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.612 26.33c1.01 0 1.786-.777 1.786-1.786 0-1.01-.777-1.787-1.786-1.787-1.01 0-1.787.777-1.787 1.787 0 .932.777 1.786 1.787 1.786zm8.776-.078c1.01 0 1.787-.776 1.787-1.786s-.777-1.786-1.787-1.786c-1.01 0-1.786.776-1.786 1.786.078 1.01.854 1.786 1.786 1.786zm-13.825 6.136c1.01 0 1.787-.776 1.787-1.786s-.777-1.786-1.787-1.786c-1.01 0-1.786.776-1.786 1.786s.776 1.786 1.786 1.786zm18.874 0c1.01 0 1.786-.776 1.786-1.786s-.776-1.786-1.786-1.786-1.787.776-1.787 1.786c.078 1.01.855 1.786 1.787 1.786zm-9.398-21.28c1.01 0 1.785-.778 1.785-1.788s-.776-1.786-1.786-1.786-1.788.777-1.788 1.786c0 1.01.777 1.787 1.787 1.787zM3.183 3.183h33.632v33.632H3.184V3.184zM40 0H0v40h40V0zm69.748 16.777c0 .543-.156 1.01-.544 1.32-.388.31-.854.544-1.476.544h-2.563v-3.65h2.563c.622 0 1.088.156 1.476.544.31.233.544.7.544 1.243zm.932 3.34l.233-.156c.31-.232.62-.465.854-.776.233-.31.388-.7.544-1.087.156-.388.234-.854.234-1.32 0-.622-.078-1.165-.31-1.71-.234-.543-.545-1.01-.933-1.397-.387-.388-.853-.7-1.475-.932-.543-.233-1.242-.31-1.942-.31h-5.514v14.057h2.795v-5.592H108.272l1.864 5.592h2.874l-2.33-6.368zm-14.292-7.69h2.796v14.058h-2.796V12.427zm-17.553 0l-2.175 8.855-2.563-8.855H72l-2.563 8.855-2.097-8.855h-2.874l3.728 14.058h2.33l2.563-8.466 2.563 8.465h2.33l3.806-14.058h-2.95zm9.087 4.194l-1.786 5.05h3.495l-1.708-5.05zm1.243-4.115l4.893 13.98h-2.874L90.33 24h-4.893l-.854 2.485H81.71L86.6 12.427h2.563v.078zM59.96 21.67h-3.494l1.786-5.05 1.71 5.05zm-3.028-9.243L52.04 26.485h2.873L55.767 24h4.97l.855 2.485h2.874l-4.97-14.058H56.93z"
+                      fill="#FFF" fill-rule="evenodd"></path>
+                  </svg>
+                </a>
+                <button type="button" class="icon-fallback-text site-nav__link js-drawer-open-left" aria-controls="NavDrawer" aria-expanded="false">
+                  <span>Menu</span>
+                </button>
+              </div>
+            </div>
+            <div class="grid__item one-third text-right">
+              <div class="site-nav--mobile">
+                <div class="buy-now">
+                  <a href="https://getawair.com/collections/all">
+                    <button class="addtocartbtn buybtn">
+                      Buy Now
+                    </button>
+                  </a>
+                </div>
+                <a href="/cart" class="js-drawer-open-right site-nav__link" aria-controls="CartDrawer" aria-expanded="false">
+                  <span class="icon-fallback-text">
+                    <i class="fa fa-shopping-cart fa-2x"></i>
+                    <span class="site-header__cart-indicator hide"></span>
+                    <span class="fallback-text">Information</span>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div id="drawer--right">
+    </div>
+    <div id="MainContent">
+      <section id="mainBanner">
+        <ul>
+          <li>
+            <img class="box_img" src="image/main_banner.png">
+          </li>
+          <li style="display: none">
+            <img class="box_img" src="image/main_banner.png">
+          </li>
+        </ul>
+      </section>
+      <section id="autovideo">
+        <div class="vodArea">
+          <video muted="" preload="true" loop="" autoplay="" style="width:100%">
+            <source src="https://nikevideo.nike.com/72451143001/201807/3592/72451143001_5813288474001_5813288312001.mp4" type="video/mp4">
+          </video>
+        </div>
+      </section>
+      <section>
+        <div style="margin:150px 0 150px 0">
+          <div class="title_box">
+            <h2 class="title">삶을 바꾸는</h2>
+            <p class="subtitle">가벼운 변화들<span class="subscript">로맘스만의 특별한 기능과 디자인</span></p>
+          </div>
+          <div>
+            <div class="first_button"><img src="image/sample.png"></div>
+            <div class="sec_button"><img src="image/sample1.png"></div>
+            <div class="trd_button"><img src="image/sample1.png"></div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div>
+          <img class="box_img" src="image/samplevideo.png">
+        </div>
+      </section>
+      <section id="member">
+        <div style="margin: 150px 0 0 150px">
+          <div class="title_box" >
+            <h2 class="title">변화에 대한 기록</h2>            
+            <p class="subtitle">기록 <span class="subscript">로맘스 고객들의 후기</span></p>
+          </div>
+          <div class="_style_2a7iRb" data-reactid="502">
+            <div class="_style_1fRwDe" data-reactid="503">
+              <div class="_style_4d3dW3" data-reactid="504">
+                <div style="position:relative;" data-reactid="505">
+                  <div class="_style_8vhYb" style="transform:translateX(0%) translateZ(0);" data-reactid="506">
+                    <div class="_style_2pvNNJ" data-reactid="507">
+                      <div class="_style_32rF7i" data-reactid="508">
+                        <div class="_style_4CbA7I" data-reactid="509">
+                          <div class="_style_2ugb4T" data-reactid="510">
+                            <div class="_style_18TC1P" data-reactid="511">
+                              <picture class="_style_2SgKkW" data-reactid="512">
+                                <source srcset="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/8e1f056b-bbe8-4910-b477-9ebe9c1356e6/desk.jpg, https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/8e1f056b-bbe8-4910-b477-9ebe9c1356e6/desk2x.jpg 2x"
+                                  media="(min-width: 1024px)" type="image/jpg" data-reactid="513">
+                                <source srcset="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/8e1f056b-bbe8-4910-b477-9ebe9c1356e6/tablet.jpg, https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/8e1f056b-bbe8-4910-b477-9ebe9c1356e6/tablet2x.jpg 2x"
+                                  media="(max-width: 1023px) and (min-width: 768px)" type="image/jpg" data-reactid="514">
+                                <source srcset="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/8e1f056b-bbe8-4910-b477-9ebe9c1356e6/palm.jpg, https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/8e1f056b-bbe8-4910-b477-9ebe9c1356e6/palm2x.jpg 2x"
+                                  media="(max-width: 767px)" type="image/jpg" data-reactid="515">
+                                <img alt="Card 1" aria-label="Card 1" class="_style_1GlHy0" src="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/8e1f056b-bbe8-4910-b477-9ebe9c1356e6/desk.jpg">
+                              </picture>
+                            </div>
+                          </div>
+                          <div class="_style_3QPftt" data-reactid="517">
+                            <div class="_style_3XjDEC" data-reactid="518">
+                              <div class="wcb-markdown cmln__markdown" data-reactid="519">
+                                <p class="cmln__paragraph">"제가 가진 차량으로 돈을 벌 수 있다는 아이디어가 마음에 들어 Uber 운행을 시작했습니다. 몇 주가 지난 후에는 이 일을 앞으로도 계속 하고 싶다는 생각이
+                                  들었죠." </p>
+                                <p class="cmln__paragraph">
+                                  <em>
+                                    <strong class="cmln__strong">브랜든</strong>, 코치 겸 시카고 파트너</em>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="_style_32rF7i" data-reactid="520">
+                        <div class="_style_4CbA7I" data-reactid="521">
+                          <div class="_style_2ugb4T" data-reactid="522">
+                            <div class="_style_18TC1P" data-reactid="523">
+                              <picture class="_style_2SgKkW" data-reactid="524">
+                                <source srcset="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/1bfa5f79-0418-4a46-8fff-9b5a4aca9943/desk.jpg, https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/1bfa5f79-0418-4a46-8fff-9b5a4aca9943/desk2x.jpg 2x"
+                                  media="(min-width: 1024px)" type="image/jpg" data-reactid="525">
+                                <source srcset="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/1bfa5f79-0418-4a46-8fff-9b5a4aca9943/tablet.jpg, https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/1bfa5f79-0418-4a46-8fff-9b5a4aca9943/tablet2x.jpg 2x"
+                                  media="(max-width: 1023px) and (min-width: 768px)" type="image/jpg" data-reactid="526">
+                                <source srcset="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/1bfa5f79-0418-4a46-8fff-9b5a4aca9943/palm.jpg, https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/1bfa5f79-0418-4a46-8fff-9b5a4aca9943/palm2x.jpg 2x"
+                                  media="(max-width: 767px)" type="image/jpg" data-reactid="527">
+                                <img alt="Card 2" aria-label="Card 2" class="_style_1GlHy0" src="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/1bfa5f79-0418-4a46-8fff-9b5a4aca9943/desk.jpg">
+                              </picture>
+                            </div>
+                          </div>
+                          <div class="_style_3QPftt" data-reactid="529">
+                            <div class="_style_3XjDEC" data-reactid="530">
+                              <div class="wcb-markdown cmln__markdown" data-reactid="531">
+                                <p class="cmln__paragraph">"전 밖에 나가서 새로운 사람들을 만나는 일을 하고 싶었어요. Uber 덕분에 이 두 가지는 물론, 전에는 미처 보지 못했던 도시의 새로운 부분들도 만나고 있답니다."
+                                </p>
+                                <p class="cmln__paragraph">
+                                  <em>
+                                    <strong class="cmln__strong">카트리나</strong>, 주부 겸 시애틀 파트너</em>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="_style_32rF7i" data-reactid="532">
+                        <div class="_style_4CbA7I" data-reactid="533">
+                          <div class="_style_2ugb4T" data-reactid="534">
+                            <div class="_style_18TC1P" data-reactid="535">
+                              <picture class="_style_2SgKkW" data-reactid="536">
+                                <source srcset="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/01de97a8-09cb-4d61-8d36-b96b60f83e6a/desk.jpg, https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/01de97a8-09cb-4d61-8d36-b96b60f83e6a/desk2x.jpg 2x"
+                                  media="(min-width: 1024px)" type="image/jpg" data-reactid="537">
+                                <source srcset="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/01de97a8-09cb-4d61-8d36-b96b60f83e6a/tablet.jpg, https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/01de97a8-09cb-4d61-8d36-b96b60f83e6a/tablet2x.jpg 2x"
+                                  media="(max-width: 1023px) and (min-width: 768px)" type="image/jpg" data-reactid="538">
+                                <source srcset="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/01de97a8-09cb-4d61-8d36-b96b60f83e6a/palm.jpg, https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/01de97a8-09cb-4d61-8d36-b96b60f83e6a/palm2x.jpg 2x"
+                                  media="(max-width: 767px)" type="image/jpg" data-reactid="539">
+                                <img alt="Card 3" aria-label="Card 3" class="_style_1GlHy0" src="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/01de97a8-09cb-4d61-8d36-b96b60f83e6a/desk.jpg">
+                              </picture>
+                            </div>
+                          </div>
+                          <div class="_style_3QPftt" data-reactid="541">
+                            <div class="_style_3XjDEC" data-reactid="542">
+                              <div class="wcb-markdown cmln__markdown" data-reactid="543">
+                                <p class="cmln__paragraph">"Uber 덕분에 저는 케이크를 만들면서 창의력을 마음껏 펼치고 있어요. 운전을 통해 벌어들인 추가 수익으로 꿈꾸던 일을 할 수 있게 된 것이죠." </p>
+                                <p class="cmln__paragraph">
+                                  <em>
+                                    <strong class="cmln__strong">제니</strong>, 자영업자 겸 로스앤젤레스 파트너</em>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="_style_32rF7i" data-reactid="544">
+                        <div class="_style_4CbA7I" data-reactid="545">
+                          <div class="_style_2ugb4T" data-reactid="546">
+                            <div class="_style_18TC1P" data-reactid="547">
+                              <picture class="_style_2SgKkW" data-reactid="548">
+                                <source srcset="" media="(min-width: 1024px)" type="image/jpg" data-reactid="549">
+                                <source srcset="" media="(max-width: 1023px) and (min-width: 768px)" type="image/jpg" data-reactid="550">
+                                <source srcset="" media="(max-width: 767px)" type="image/jpg" data-reactid="551">
+                                <div class="_style_2Nn4Bh" data-reactid="552"></div>
+                              </picture>
+                            </div>
+                          </div>
+                          <div class="_style_3QPftt" data-reactid="553">
+                            <div class="_style_3XjDEC" data-reactid="554">
+                              <div class="wcb-markdown cmln__markdown" data-reactid="555">
+                                <p class="cmln__paragraph">"Uber 덕분에 제 목표와 꿈을 이루는 것이 훨씬 쉬워졌습니다. 세상 사람들과 저의 음악적 경험을 공유하는 데 집중할 수 있게 되었습니다."</p>
+                                <p class="cmln__paragraph">
+                                  <em>
+                                    <strong class="cmln__strong">션</strong>, 음악인 겸 로스앤젤레스 파트너</em>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button style="line-height:0px;padding:13px;margin-top:-29px;background-color:#1A1A1A;:hover:[object Object];:focus:[object Object];:active:[object Object];border-color:#1A1A1A;position:absolute;top:50%;right:0;@media only screen and (min-width: 575px) and (max-width: 768px):[object Object];@media only screen and (max-width: 575px):[object Object];"
+              aria-label="다음 슬라이드" kind="primary" class="_style_4G79z7" data-reactid="556">
+              <svg viewBox="0 0 64 64" width="28px" height="28px" class=" _style_4wJp4e" data-reactid="557">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M59.927 31.985l.073.076-16.233 17.072-3.247-3.593L51.324 34H4v-4h47.394L40.52 18.407l3.247-3.494L60 31.946l-.073.039z"
+                  data-reactid="558"></path>
+              </svg>
+              <span class="_style_17XNsa" data-reactid="559">다음 슬라이드</span>
+            </button>
+          </div>
+          <div class="_style_VRmHw" data-reactid="560">
+            <div class="_style_3FSejj" data-reactid="561">
+              <ul class="_style_2iqE8q" data-reactid="562">
+                <li class="_style_3FLqGI" data-reactid="563">
+                  <button aria-disabled="true" tabindex="-1" class="_style_2nZ4wJ" data-reactid="564"></button>
+                </li>
+                <li class="_style_3FLqGI" data-reactid="565">
+                  <button aria-disabled="true" tabindex="-1" class="_style_1avqfo" data-reactid="566"></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="news">
+        <div class="_style_4328lY wcb-promo-card" data-reactid="567">
+          <div class="title_box">
+            <p class="subtitle">로맘스의</p>
+            <h2 class="title">새로운 소식 <span class="subscript">로맘스의 새로운 소식 등</span></h2>
+          </div>
+          <div class="_style_3LwFWg" data-reactid="568">
+            <div class="_style_PHFSe" data-reactid="569">
+              <div class="_style_18TC1P" data-reactid="570">
+                <picture class="_style_2SgKkW" data-reactid="571">
+                  <source srcset="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/4878ffeb-2036-485f-b274-73f0f36e3a71/desk.jpg, https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/4878ffeb-2036-485f-b274-73f0f36e3a71/desk2x.jpg 2x"
+                    media="(min-width: 1024px)" type="image/jpg" data-reactid="572">
+                  <source srcset="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/4878ffeb-2036-485f-b274-73f0f36e3a71/tablet.jpg, https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/4878ffeb-2036-485f-b274-73f0f36e3a71/tablet2x.jpg 2x"
+                    media="(max-width: 1023px) and (min-width: 768px)" type="image/jpg" data-reactid="573">
+                  <source srcset="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/4878ffeb-2036-485f-b274-73f0f36e3a71/palm.jpg, https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/4878ffeb-2036-485f-b274-73f0f36e3a71/palm2x.jpg 2x"
+                    media="(max-width: 767px)" type="image/jpg" data-reactid="574">
+                  <img alt="A business woman holding a phone and looking away" aria-label="A business woman holding a phone and looking away"
+                    class="_style_1GlHy0" src="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/4878ffeb-2036-485f-b274-73f0f36e3a71/desk.jpg">
+                </picture>
+              </div>
+            </div>
+            <div class="_style_1WjRub" data-reactid="576">
+              <div class="_style_VxPAE" data-reactid="577">
+                <p class="_style_bsxwn" data-reactid="578">기업을 위한 차량 서비스</p>
+                <h2 class="_style_3zaJwR" data-reactid="579">Uber의 최신 뉴스</h2>
+              </div>
+              <div class="wcb-markdown cmln__markdown" data-reactid="580">
+                <p class="cmln__paragraph">출장, 출퇴근, 고객 차량 서비스 등 모든 지상 교통편을 손쉽게 관리하세요.</p>
+              </div>
+              <a class="wcb-button _style_1JtngI" href="https://www.uber.com/business?mainSite=hpblock" data-reactid="581">
+                <!-- react-text: 582 -->자세히 알아보기
+                <!-- /react-text -->
+                <span class="_style_1gVw1O" data-reactid="583">
+                  <svg viewBox="0 0 64 64" width="16px" height="16px" class=" _style_4wJp4e" data-reactid="584">
+                    <path d="M23.161 53.213l-4.242-4.242a1 1 0 0 1 0-1.415L34.475 32 18.919 16.444a1 1 0 0 1 0-1.415l4.242-4.242a1 1 0 0 1 1.414 0L40.84 27.05l4.242 4.243a1 1 0 0 1 0 1.414L40.84 36.95 24.575 53.213a1 1 0 0 1-1.414 0z"
+                      data-reactid="585"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div class="_style_PHFSe" data-reactid="569">
+              <div class="_style_18TC1P" data-reactid="570">
+                <picture class="_style_2SgKkW" data-reactid="571">
+                  <source srcset="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/4878ffeb-2036-485f-b274-73f0f36e3a71/desk.jpg, https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/4878ffeb-2036-485f-b274-73f0f36e3a71/desk2x.jpg 2x"
+                    media="(min-width: 1024px)" type="image/jpg" data-reactid="572">
+                  <source srcset="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/4878ffeb-2036-485f-b274-73f0f36e3a71/tablet.jpg, https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/4878ffeb-2036-485f-b274-73f0f36e3a71/tablet2x.jpg 2x"
+                    media="(max-width: 1023px) and (min-width: 768px)" type="image/jpg" data-reactid="573">
+                  <source srcset="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/4878ffeb-2036-485f-b274-73f0f36e3a71/palm.jpg, https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/4878ffeb-2036-485f-b274-73f0f36e3a71/palm2x.jpg 2x"
+                    media="(max-width: 767px)" type="image/jpg" data-reactid="574">
+                  <img alt="A business woman holding a phone and looking away" aria-label="A business woman holding a phone and looking away"
+                    class="_style_1GlHy0" src="https://d1goeicueq33a8.cloudfront.net/chameleon-assets/v1.0.0/4878ffeb-2036-485f-b274-73f0f36e3a71/desk.jpg">
+                </picture>
+              </div>
+            </div>
+            <div class="_style_1WjRub" data-reactid="576">
+              <div class="_style_VxPAE" data-reactid="577">
+                <p class="_style_bsxwn" data-reactid="578">기업을 위한 차량 서비스</p>
+                <h2 class="_style_3zaJwR" data-reactid="579">Uber의 최신 뉴스</h2>
+              </div>
+              <div class="wcb-markdown cmln__markdown" data-reactid="580">
+                <p class="cmln__paragraph">출장, 출퇴근, 고객 차량 서비스 등 모든 지상 교통편을 손쉽게 관리하세요.</p>
+              </div>
+              <a class="wcb-button _style_1JtngI" href="https://www.uber.com/business?mainSite=hpblock" data-reactid="581">
+                <!-- react-text: 582 -->자세히 알아보기
+                <!-- /react-text -->
+                <span class="_style_1gVw1O" data-reactid="583">
+                  <svg viewBox="0 0 64 64" width="16px" height="16px" class=" _style_4wJp4e" data-reactid="584">
+                    <path d="M23.161 53.213l-4.242-4.242a1 1 0 0 1 0-1.415L34.475 32 18.919 16.444a1 1 0 0 1 0-1.415l4.242-4.242a1 1 0 0 1 1.414 0L40.84 27.05l4.242 4.243a1 1 0 0 1 0 1.414L40.84 36.95 24.575 53.213a1 1 0 0 1-1.414 0z"
+                      data-reactid="585"></path>
+                  </svg>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <img class="box_img" src="image/campaign.png">
+        <div class="end_box">
+          <img class="ending_credit" src="image/08-1..png">
+        </div>
+      </section>
+    </div>
+    <footer>
+      <div>
+        <img>
+        <div id="footer_social"></div>
+      </div>
+      <div>
+        <p>상호명 주식회사 대디포베베 대표이사 전영석 대표상담전화 02-000-0000</p>
+        <p>사업자등록번호 000-00-00000 통신판매업신고증 제 서울-0000</p>
+        <p>본사주소</p><address>서울특별시 강남구 테헤란로69길 5 14층</address>
+        <span>Copyright(c) 2018 LOMOMS Co., Ltd, All right reserved</span>
+      </div>
+      <div>
+        <p>CUSTOMER SERVICE CENTER</p>
+        <h2>02-123-4567</h2>
+        <p>운영시간 10:00 ~ 20:00</p>
+        <p>메일 help@cgagu.com</p>
+      </div>      
+      <div>
+        <ul>
+          <li>회사소개</li>
+          <li>인재채용</li>
+          <li>고객센터</li>
+        </ul>
+        <ul>
+          <li>이용약관</li>
+          <li>개인정보취급방침</li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+div{display:block;}
+
+/* section */
+.box_img{width: 100%;}
+.title_box{padding-bottom:75px}
+.end_box{text-align: center}.ending_credit{padding: 150px 0 150px 0; vertical-align: middle;}
+.top_header{background-color: #272323;padding: 20px 75px 20px 75px;}
+.top_header > div{display: inline-block;}
+.top_center{text-align: center;}
+
+/* font-style */
+.title{font-size:24pt; font-style:bold;}
+.subtitle{font-size: 24pt}
+.subscript{font-size:10pt;background-color:gary;} 
