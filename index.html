@@ -6,9 +6,41 @@
   <title>Lomoms | Main</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/common.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(){
+    /* intialize products-nav top value */
+    $('.products-nav').css({
+      top: 70 + ($('.promo-ribbon').height() || 0) /* site-header scrolled height : 70px */
+    });
+
+    var scrollTopCache = 0;
+    var isProductsNavOpened = false;
+
+    function updateHeader() {
+      scrollTopCache = $(window).scrollTop();
+
+      
+          if (scrollTopCache > $('.site_header').height()) {
+            $('body').addClass('scrolled');
+          } else if ((scrollTopCache <= $('.site_header').height()) && !isProductsNavOpened) {
+            $('body').removeClass('scrolled');
+          }
+      
+    }
+
+    
+    $(window).on('scroll', updateHeader);
+    $(window).triggerHandler('scroll');
+  });
+
+  </script>
 </head>
 
-<body>
+<body class="template-index promo-ribbon-on">
   <!-- top bar start -->
   <div class="top_wrapper">
       <div class="left_float left_padding">
@@ -141,26 +173,6 @@
       </div>
     </header>
     <!-- Header End -->
-    <div class="products-nav" id="products-nav" style="top: 110px; display: none">
-      <div class="products-nav-container">
-        <a href="/" class="products-nav-item">
-          <img src="" class="products-nav-item__image">
-          <span class="products-nav-item__name">Awair</span>
-        </a>
-        <a href="/pages/awair-glow" class="products-nav-item">
-          <img src="" class="products-nav-item__image">
-          <span class="products-nav-item__name">Glow</span>
-        </a>
-        <a href="/pages/awair-baby" class="products-nav-item">
-          <img src="" class="products-nav-item__image">
-          <span class="products-nav-item__name">Baby</span>
-        </a>
-        <a href="/pages/awair-for-business" class="products-nav-item">
-          <img src="" class="products-nav-item__image">
-          <span class="products-nav-item__name">Business</span>
-        </a>
-      </div>
-    </div>
     <nav class="nav_bar mobile-nav-bar-wrapper large--hide medium-down--show" style="display:none;">
       <div class="wrapper">
         <div class="large--hide medium-down--show">
@@ -227,28 +239,39 @@
         </div>
       </section>
       <section>
-        <div style="margin:150px 0 150px 0">
-          <div class="title_box">
-            <h2 class="title">삶을 바꾸는</h2>
-            <p class="subtitle">가벼운 변화들<span class="subscript">로맘스만의 특별한 기능과 디자인</span></p>
+        <div class="box_section">
+          <div class="title_box left_padding">
+            <h2 class="title"><strong>삶을 바꾸는</strong></h2>
+            <h2 class="subtitle">가벼운 변화들 <span class="subscript">로맘스만의 특별한 기능과 디자인</span></h2>
           </div>
-          <div>
+          <div class="life_banner_box left_padding right_padding">
             <div class="first_button"><img src="image/sample.png"></div>
-            <div class="sec_button"><img src="image/sample1.png"></div>
-            <div class="trd_button"><img src="image/sample1.png"></div>
+            <div class="sec_button">
+              <ul>
+                <li><img src="image/sample1.png"></li>
+                <li><img src="image/sample1.png"></li>
+              </ul>
+            </div>
+            
           </div>
         </div>
       </section>
       <section>
         <div>
+          
           <img class="box_img" src="image/samplevideo.png">
+          <a class="play-btn" id="play-video" data-toggle="modal" data-target="#mov-intro">
+              <svg width="24" height="31" viewBox="0 0 24 31" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.304 30.824c-.117 0-.226-.012-.326-.037-.1-.025-.192-.063-.276-.113-.217-.117-.39-.276-.514-.477-.125-.2-.188-.418-.188-.652V1.282C0 1.048.063.832.188.63.313.43.485.27.702.154c.2-.117.422-.168.665-.15.242.016.464.09.664.225l20.54 14.118c.168.117.3.272.402.464.1.192.15.39.15.59 0 .217-.05.417-.15.6-.1.185-.234.344-.402.478L2.03 30.6c-.116.065-.237.12-.362.162-.126.04-.247.062-.364.062z" fill="#FFF" fill-rule="evenodd"></path>
+              </svg>
+          </a>
         </div>
       </section>
       <section id="member">
-        <div style="margin: 150px 0 0 150px">
+        <div class="box_section left_margin_150">
           <div class="title_box" >
-            <h2 class="title">변화에 대한 기록</h2>            
-            <p class="subtitle">기록 <span class="subscript">로맘스 고객들의 후기</span></p>
+            <h2 class="title"><strong>변화에 대한 기록</strong></h2>            
+            <h2 class="subtitle">기록 <span class="subscript">로맘스 고객들의 후기</span></h2>
           </div>
           <div class="_style_2a7iRb" data-reactid="502">
             <div class="_style_1fRwDe" data-reactid="503">
