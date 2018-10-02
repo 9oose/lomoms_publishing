@@ -6,31 +6,79 @@
   <title>Lomoms | Main</title>
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/common.css">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>
+  $(document).ready(function(){
+    /* intialize products-nav top value */
+    $('.products-nav').css({
+      top: 70 + ($('.promo-ribbon').height() || 0) /* site-header scrolled height : 70px */
+    });
+
+    var scrollTopCache = 0;
+    var isProductsNavOpened = false;
+
+    function updateHeader() {
+      scrollTopCache = $(window).scrollTop();
+
+      
+          if (scrollTopCache > $('.site_header').height()) {
+            $('body').addClass('scrolled');
+          } else if ((scrollTopCache <= $('.site_header').height()) && !isProductsNavOpened) {
+            $('body').removeClass('scrolled');
+          }
+      
+    }
+
+    
+    $(window).on('scroll', updateHeader);
+    $(window).triggerHandler('scroll');
+  });
+
+  </script>
 </head>
 
-<body>
-  <div class="promo-ribbon is-moved-by-drawer">
-    <div class="top_header">
-      <div>
-        <img src="image/로맘스 로고 (텍스트).png">
+<body class="template-index promo-ribbon-on">
+  <!-- top bar start -->
+  <div class="top_wrapper">
+      <div class="left_float left_padding">
+        <img src="image/logo(text).png" alt="로맘스 텍스트 로고""/>
       </div>
-      <div class="top_center">
-        <a href=""><img src="image/페이스북.png"></a>
-        <a href=""><img src="image/인스타그램.png"></a>
-        <a href=""><img src="image/트위터.png"></a>
-        <a href=""><img src="image/유튜브.png"></a>
+      <div class="social_wrapper">
+        <a href=""><img src="image/facebook.png" alt="페이스북 링크"/></a>
+        <a href=""><img src="image/instagram.png" alt="인스타그램 링크"/></a>
+        <a href=""><img src="image/twitter.png" alt="트위터 링크"/></a>
+        <a href=""><img src="image/youtube.png" alt="유투브 링크"/></a>
       </div>
-      <div>
-        <a href="#">KR</a>
+      <div class="right_float right_padding lang_button">
+        <a href="#">
+          <span>KR</span><img src="image/down_image.png"/>
+        </a>
+      </div>
+  </div>
+  <!-- top bar end -->
+  <!-- lang div start-->
+  <div class="lang_box">
+    <div class="right_float right_padding_50 left_shift top_padding_50">
+      <button type="button" class="close_button">
+        <img src="image/close.png" alt="취소버튿">
+      </button>
+    </div>
+    <div lang="EN" class="lang_wrapper left_margin right_margin">
+      <span>Select your language</span>
+      <div class="lang_select top_padding_50 bottom_padding">
+        <label><h1>KOREAN</h1></label>
+        <a href=""><h1>ENGLISH</h1></a>
       </div>
     </div>
   </div>
-  <div style="display:none">
-    <label></label>
-    <a></a>
-  </div>
+  <!-- lang div end-->
+
+
+  <!-- begin mobile-nav -->
   <div id="NavDrawer" class="drawer drawer--left" style="display: none">
-    <!-- begin mobile-nav -->
     <ul class="mobile-nav">
       <li class="mobile-nav__item">
         <a href="/pages/design" class="mobile-nav__link">BRAND</a>
@@ -71,44 +119,45 @@
         <a href="/pages/awair-for-business" class="mobile-nav__link">NEWSROOM</a>
       </li>
     </ul>
-    <!-- //mobile-nav -->
   </div>
+  <!-- mobile end-->
+
+  <!-- Page Start -->
   <div id="PageContainer">
-    <header class="site-header medium--hide small--hide">
-      <div class="wrapper">
-        <div class="grid--full">
-          <div class="grid__item large--one-quarter">
-            <div class="site-header__logo large--left" itemscope="" itemtype="http://schema.org/Organization">
-              <a href="/" itemprop="url" class="site-header__logo-link">
-                <img src="image/로맘스 로고 (original) (심볼).png">
+    <!-- Header Start-->
+    <header class="site_header">
+      <div class="menu_wrapper">
+        <div class="grid_full">
+          <div class="grid_item large_one_quarter">
+            <div class="site_header_logo large_left">
+              <a href="/" itemprop="url" class="site_header_logo-link">
+                <img src="image/logo_simbol.png">
               </a>
             </div>
           </div>
-          <div class="grid__item large--one-half text-center">
-            <ul class="site-nav js" id="AccessibleNav">
+          <div class="grid_item large_one_half text-center">
+            <ul class="site-nav" id="AccessibleNav">
               <li>
-                <a href="/pages/design" class="site-nav__link">BRAND</a>
+                <a href="pages/design" class="site-nav__link">BRAND</a>
               </li>
               <li>
                 <span class="site-nav__link site-nav__link-products">PRODUCT</a>
                 </span>
               </li>
               <li>
-                <a href="/pages/awair-plus" class="site-nav__link">COMMUNITY</a>
+                <a href="pages/awair-plus" class="site-nav__link">COMMUNITY</a>
               </li>
               <li>
-                <a href="/pages/awair-for-business" class="site-nav__link">NEWSROOM</a>
+                <a href="pages/awair-for-business" class="site-nav__link">NEWSROOM</a>
               </li>
             </ul>
           </div>
-          <div class="grid__item large--one-quarter large--text-right medium-down--hide">
+          <div class="grid_item large_one_quarter large--text-right medium-down--hide">
             <div class="top-links">
               <ul class="top-links--icon-links">
                 <li>
                   <div class="buy-now">
-                    <a href="https://getawair.com/collections/all" class="addtocartbtn buybtn">
-                      Buy Now
-                    </a>
+                    <a href="https://getawair.com/collections/all" class="addtocartbtn buybtn">Buy Now</a>
                   </div>
                 </li>
                 <li>
@@ -123,37 +172,14 @@
         </div>
       </div>
     </header>
-    <div class="products-nav" id="products-nav" style="top: 110px; display: none">
-      <div class="products-nav-container">
-        <a href="/" class="products-nav-item">
-          <img src="//cdn.shopify.com/s/files/1/1439/3986/t/6/assets/products-nav-awair.png?5423002369625910519" class="products-nav-item__image">
-          <span class="products-nav-item__name">Awair</span>
-        </a>
-        <a href="/pages/awair-glow" class="products-nav-item">
-          <img src="//cdn.shopify.com/s/files/1/1439/3986/t/6/assets/products-nav-glow.png?5423002369625910519" class="products-nav-item__image">
-          <span class="products-nav-item__name">Glow</span>
-        </a>
-        <a href="/pages/awair-baby" class="products-nav-item">
-          <img src="//cdn.shopify.com/s/files/1/1439/3986/t/6/assets/products-nav-baby.png?5423002369625910519" class="products-nav-item__image">
-          <span class="products-nav-item__name">Baby</span>
-        </a>
-        <a href="/pages/awair-for-business" class="products-nav-item">
-          <img src="//cdn.shopify.com/s/files/1/1439/3986/t/6/assets/products-nav-business.png?5423002369625910519" class="products-nav-item__image">
-          <span class="products-nav-item__name">Business</span>
-        </a>
-      </div>
-    </div>
-    <nav class="nav-bar mobile-nav-bar-wrapper large--hide medium-down--show" style="">
+    <!-- Header End -->
+    <nav class="nav_bar mobile-nav-bar-wrapper large--hide medium-down--show" style="display:none;">
       <div class="wrapper">
         <div class="large--hide medium-down--show">
           <div class="mobile-grid--table">
             <div class="grid__item two-thirds">
               <div class="site-nav--mobile">
                 <a href="/" itemprop="url" class="site-header__logo-link">
-                  <svg width="113" height="40" viewBox="0 0 113 40" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.612 26.33c1.01 0 1.786-.777 1.786-1.786 0-1.01-.777-1.787-1.786-1.787-1.01 0-1.787.777-1.787 1.787 0 .932.777 1.786 1.787 1.786zm8.776-.078c1.01 0 1.787-.776 1.787-1.786s-.777-1.786-1.787-1.786c-1.01 0-1.786.776-1.786 1.786.078 1.01.854 1.786 1.786 1.786zm-13.825 6.136c1.01 0 1.787-.776 1.787-1.786s-.777-1.786-1.787-1.786c-1.01 0-1.786.776-1.786 1.786s.776 1.786 1.786 1.786zm18.874 0c1.01 0 1.786-.776 1.786-1.786s-.776-1.786-1.786-1.786-1.787.776-1.787 1.786c.078 1.01.855 1.786 1.787 1.786zm-9.398-21.28c1.01 0 1.785-.778 1.785-1.788s-.776-1.786-1.786-1.786-1.788.777-1.788 1.786c0 1.01.777 1.787 1.787 1.787zM3.183 3.183h33.632v33.632H3.184V3.184zM40 0H0v40h40V0zm69.748 16.777c0 .543-.156 1.01-.544 1.32-.388.31-.854.544-1.476.544h-2.563v-3.65h2.563c.622 0 1.088.156 1.476.544.31.233.544.7.544 1.243zm.932 3.34l.233-.156c.31-.232.62-.465.854-.776.233-.31.388-.7.544-1.087.156-.388.234-.854.234-1.32 0-.622-.078-1.165-.31-1.71-.234-.543-.545-1.01-.933-1.397-.387-.388-.853-.7-1.475-.932-.543-.233-1.242-.31-1.942-.31h-5.514v14.057h2.795v-5.592H108.272l1.864 5.592h2.874l-2.33-6.368zm-14.292-7.69h2.796v14.058h-2.796V12.427zm-17.553 0l-2.175 8.855-2.563-8.855H72l-2.563 8.855-2.097-8.855h-2.874l3.728 14.058h2.33l2.563-8.466 2.563 8.465h2.33l3.806-14.058h-2.95zm9.087 4.194l-1.786 5.05h3.495l-1.708-5.05zm1.243-4.115l4.893 13.98h-2.874L90.33 24h-4.893l-.854 2.485H81.71L86.6 12.427h2.563v.078zM59.96 21.67h-3.494l1.786-5.05 1.71 5.05zm-3.028-9.243L52.04 26.485h2.873L55.767 24h4.97l.855 2.485h2.874l-4.97-14.058H56.93z"
-                      fill="#FFF" fill-rule="evenodd"></path>
-                  </svg>
                 </a>
                 <button type="button" class="icon-fallback-text site-nav__link js-drawer-open-left" aria-controls="NavDrawer" aria-expanded="false">
                   <span>Menu</span>
@@ -182,18 +208,28 @@
         </div>
       </div>
     </nav>
-    <div id="drawer--right">
-    </div>
-    <div id="MainContent">
+    <!-- main_content -->
+    <div class="main_content">
       <section id="mainBanner">
         <ul>
           <li>
             <img class="box_img" src="image/main_banner.png">
+            <div class="banner_text left_padding">
+              <a href=""><h1>NEW PRODUCT 50% SALE</h1></a>
+              <p>
+                로맘스 출시 기념 50% 세일 이벤트<br/>
+                이제는 서서, 즐겁게
+              </p>
+            </div>
           </li>
-          <li style="display: none">
-            <img class="box_img" src="image/main_banner.png">
-          </li>
+          <li style="display: none"><img class="box_img" src="image/main_banner.png"></li>
         </ul>
+        <div class="move_button">
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
       </section>
       <section id="autovideo">
         <div class="vodArea">
@@ -203,28 +239,39 @@
         </div>
       </section>
       <section>
-        <div style="margin:150px 0 150px 0">
-          <div class="title_box">
-            <h2 class="title">삶을 바꾸는</h2>
-            <p class="subtitle">가벼운 변화들<span class="subscript">로맘스만의 특별한 기능과 디자인</span></p>
+        <div class="box_section">
+          <div class="title_box left_padding">
+            <h2 class="title"><strong>삶을 바꾸는</strong></h2>
+            <h2 class="subtitle">가벼운 변화들 <span class="subscript">로맘스만의 특별한 기능과 디자인</span></h2>
           </div>
-          <div>
+          <div class="life_banner_box left_padding right_padding">
             <div class="first_button"><img src="image/sample.png"></div>
-            <div class="sec_button"><img src="image/sample1.png"></div>
-            <div class="trd_button"><img src="image/sample1.png"></div>
+            <div class="sec_button">
+              <ul>
+                <li><img src="image/sample1.png"></li>
+                <li><img src="image/sample1.png"></li>
+              </ul>
+            </div>
+            
           </div>
         </div>
       </section>
       <section>
         <div>
+          
           <img class="box_img" src="image/samplevideo.png">
+          <a class="play-btn" id="play-video" data-toggle="modal" data-target="#mov-intro">
+              <svg width="24" height="31" viewBox="0 0 24 31" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1.304 30.824c-.117 0-.226-.012-.326-.037-.1-.025-.192-.063-.276-.113-.217-.117-.39-.276-.514-.477-.125-.2-.188-.418-.188-.652V1.282C0 1.048.063.832.188.63.313.43.485.27.702.154c.2-.117.422-.168.665-.15.242.016.464.09.664.225l20.54 14.118c.168.117.3.272.402.464.1.192.15.39.15.59 0 .217-.05.417-.15.6-.1.185-.234.344-.402.478L2.03 30.6c-.116.065-.237.12-.362.162-.126.04-.247.062-.364.062z" fill="#FFF" fill-rule="evenodd"></path>
+              </svg>
+          </a>
         </div>
       </section>
       <section id="member">
-        <div style="margin: 150px 0 0 150px">
+        <div class="box_section left_margin_150">
           <div class="title_box" >
-            <h2 class="title">변화에 대한 기록</h2>            
-            <p class="subtitle">기록 <span class="subscript">로맘스 고객들의 후기</span></p>
+            <h2 class="title"><strong>변화에 대한 기록</strong></h2>            
+            <h2 class="subtitle">기록 <span class="subscript">로맘스 고객들의 후기</span></h2>
           </div>
           <div class="_style_2a7iRb" data-reactid="502">
             <div class="_style_1fRwDe" data-reactid="503">
@@ -335,8 +382,7 @@
                               <div class="wcb-markdown cmln__markdown" data-reactid="555">
                                 <p class="cmln__paragraph">"Uber 덕분에 제 목표와 꿈을 이루는 것이 훨씬 쉬워졌습니다. 세상 사람들과 저의 음악적 경험을 공유하는 데 집중할 수 있게 되었습니다."</p>
                                 <p class="cmln__paragraph">
-                                  <em>
-                                    <strong class="cmln__strong">션</strong>, 음악인 겸 로스앤젤레스 파트너</em>
+                                  <em><strong class="cmln__strong">션</strong>, 음악인 겸 로스앤젤레스 파트너</em>
                                 </p>
                               </div>
                             </div>
@@ -348,7 +394,7 @@
                 </div>
               </div>
             </div>
-            <button style="line-height:0px;padding:13px;margin-top:-29px;background-color:#1A1A1A;:hover:[object Object];:focus:[object Object];:active:[object Object];border-color:#1A1A1A;position:absolute;top:50%;right:0;@media only screen and (min-width: 575px) and (max-width: 768px):[object Object];@media only screen and (max-width: 575px):[object Object];"
+            <button style="display:none;line-height:0px;padding:13px;margin-top:-29px;background-color:#1A1A1A;:hover:[object Object];:focus:[object Object];:active:[object Object];border-color:#1A1A1A;position:absolute;top:50%;right:0;@media only screen and (min-width: 575px) and (max-width: 768px):[object Object];@media only screen and (max-width: 575px):[object Object];"
               aria-label="다음 슬라이드" kind="primary" class="_style_4G79z7" data-reactid="556">
               <svg viewBox="0 0 64 64" width="28px" height="28px" class=" _style_4wJp4e" data-reactid="557">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M59.927 31.985l.073.076-16.233 17.072-3.247-3.593L51.324 34H4v-4h47.394L40.52 18.407l3.247-3.494L60 31.946l-.073.039z"
