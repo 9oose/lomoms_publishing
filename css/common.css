@@ -166,7 +166,7 @@ body.promo-ribbon-on.scrolled .site_header .grid_full>.large_one_quarter{padding
 
 /*
     우버카드
-
+*/
 @media only screen and (max-width: 1280px) and (min-width: 1025px){
 ._style_2a7iRb {
     padding-right: 6.25vw !important;
@@ -218,13 +218,7 @@ body.promo-ribbon-on.scrolled .site_header .grid_full>.large_one_quarter{padding
     position: relative !important;
 }
 ._style_18TC1P {
-    position: absolute !important;
-    width: 100% !important;
     height: 100% !important;
-    top: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    left: 0 !important;
     overflow: hidden !important;
 }
 ._style_2SgKkW {
@@ -265,4 +259,8 @@ body.promo-ribbon-on.scrolled .site_header .grid_full>.large_one_quarter{padding
     padding: 24px !important }
 }
 
-  ._style_3XjDEC {margin-bottom: -16px !important}*/
+._style_3XjDEC {margin-bottom: -16px !important}
+._style_1OT7Uy {
+    background-color: #f8f8f9 !important;
+    overflow: hidden !important;
+}
